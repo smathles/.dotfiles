@@ -25,7 +25,7 @@ compinit
 alias ls="lsd"
 alias ll="lsd -l"
 alias la="lsd -la"
-alias update="echo '------------Pacman Updates:-------------'; sudo pacman -Syu --noconfirm;echo '--------------AUR Updates:--------------';yay -Syua --noconfirm;echo '------------Flatpak Updates:------------';flatpak update -y; echo '-----------HyprPanel Updates:-----------'; directory=$(pwd); cd ~/.config/hypr/HyprPanel;git pull;cd $directory"
+alias update="sudo -v; echo '------------Pacman Updates:-------------'; pacman -Syu --noconfirm; echo '--------------AUR Updates:--------------'; yay -Syua --noconfirm; echo '------------Flatpak Updates:------------'; flatpak update -y; echo '-----------HyprPanel Updates:-----------'; directory=$(pwd); cd ~/.config/hypr/HyprPanel; git pull; cd $directory"
 
 # Custom keybinds for easy navigation
 bindkey "^[[3~" delete-char
