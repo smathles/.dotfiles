@@ -51,5 +51,3 @@ eval "$(pyenv init -)"
 # bun completions
 [ -s "/home/smathles/.bun/_bun" ] && source "/home/smathles/.bun/_bun"
 
-# random variables messing around with
-# export GDK_SCALE=1.6
