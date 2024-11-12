@@ -30,7 +30,14 @@ TODO:
   - [leader] + E to open explorer (pwd)
   - and systemise your [leader] keybindings in general! Also make sure they're documented, whether automatically or otherwise.
 
-
+2024/11/12:
+- leader key (space) does not work in neotree.
+- Style choices:
+  - Statusbar: I like halfway between Astronvim and LazyVim
+  - I like NvChad's tabline stuff, especially alt+tab to shift neovim-specific tabs!
+    - Also implement alt+w and alt+t to close and open new files respectively.
+  - I'm sick of the bad search functionality in neo-tree. Use NvChad's file explorer!
+  - 
 
 
 TJ's interesting stuff!:
