@@ -53,3 +53,25 @@ eval "$(pyenv init -)"
 # bun completions
 [ -s "/home/smathles/.bun/_bun" ] && source "/home/smathles/.bun/_bun"
 
+if command -v zoxide > /dev/null; then
+  eval "$(zoxide init zsh)"
+fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Source the Lazyman shell initialization for aliases and nvims selector
+# shellcheck source=.config/nvim-Lazyman/.lazymanrc
+[ -f ~/.config/nvim-Lazyman/.lazymanrc ] && source ~/.config/nvim-Lazyman/.lazymanrc
+# Source the Lazyman .nvimsbind for nvims key binding
+# shellcheck source=.config/nvim-Lazyman/.nvimsbind
+[ -f ~/.config/nvim-Lazyman/.nvimsbind ] && source ~/.config/nvim-Lazyman/.nvimsbind
+
+# Add custom functions
+function gpr() {
+    if [ -z "$1" ]; then
+        echo "Usage: gpr <pull-request-number>"
+        return 1
+    fi
+    git fetch origin pull/$1/head:pr-$1 && git checkout pr-$1
+}
