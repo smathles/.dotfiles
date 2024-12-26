@@ -1,0 +1,4 @@
+
+(com.github.Aylur.ags:16567): Gjs-WARNING **: 20:47:05.695: JS ERROR: ImportError: Unable to load file async from: file:///home/smathles/.config/ags/config.js (Error opening file /home/smathles/.config/ags/config.js: No such file or directory)
+_init/GLib.MainLoop.prototype.runAsync/</<@resource:///org/gnome/gjs/modules/core/overrides/GLib.js:263:34
+
